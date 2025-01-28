@@ -44,22 +44,7 @@ export class LocationController {
   getHello(): string {
     return 'Hello!!!';
   }
-  // Endpoint para ajustar la ubicación de "B"
-
-  // @Post('adjust')
-  // async adjustLocation(
-  //   @Body() body: { latitude: number; longitude: number },
-  //   ) {
-    
-  //   this.logger.log(`Body received: ${JSON.stringify(body)}`);
-
-  //   if (!body || body.latitude === undefined || body.longitude === undefined) {
-  //     this.logger.error('Invalid body: Latitude and longitude are required');
-  //     throw new BadRequestException('Latitude and longitude are required');
-  //   }
-
-  //   return this.locationService.adjustToNearestRoad(body.latitude, body.longitude);
-  // }
+  
 }
 
 

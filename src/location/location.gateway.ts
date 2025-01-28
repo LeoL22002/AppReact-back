@@ -7,8 +7,8 @@ export class LocationGateway {
   server: Server;
 
   @SubscribeMessage('sendLocation')
-  handleSendLocation(@MessageBody() data: { latitude: number; longitude: number }) {
-    const adjustedLocation =  this.adjustLocation(data);
+ async handleSendLocation(@MessageBody() data: { latitude: number; longitude: number }){
+    const adjustedLocation =  await this.adjustLocation(data);
 
     console.log('Ubicación recibida del cliente:', data);
     console.log('Ubicación ajustada:', adjustedLocation);
